@@ -29061,7 +29061,7 @@ const distributionSpecificDnfDependencies = {
         "python3-rosdep",
         "python3-vcstool",
         // Additional colcon packages (not included in ros-dev-tools)
-        "python3-colcon-coveragepy-result",
+        // "python3-colcon-coveragepy-result",
         "python3-colcon-lcov-result",
         // Others
         "python3-importlib-metadata",
@@ -29440,7 +29440,7 @@ function configOs() {
  */
 function addDnfRepo(use_ros2_testing) {
     return __awaiter(this, void 0, void 0, function* () {
-        dnf.runDnfInstall(["epel-release"]);
+        yield dnf.runDnfInstall(["epel-release"]);
         yield utils.exec("bash", [
             "-c",
             "sudo dnf install --setopt=install_weak_deps=False --quiet --assumeyes 'dnf-command(config-manager)'",
