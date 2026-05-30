@@ -24,7 +24,7 @@ const pip3Packages: string[] = ["lxml", "netifaces"];
  */
 async function prepareRos2BuildEnvironment() {
 	// Currently targeted Python version for Windows according to REP 2000
-	const python_dir = tc.find("Python", "3.10");
+	const python_dir = tc.find("Python", "3.8");
 
 	await utils.exec(
 		path.join(python_dir, "python"),
